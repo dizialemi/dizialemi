@@ -3,128 +3,201 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gizlilik Politikası — Dizi Alemi</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<title>Gizlilik Politikası — Bilgi Alemi</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --red: #e50914;
-    --bg: #0a0a0a;
-    --surface: #141414;
-    --border: #2a2a2a;
-    --text: #f0f0f0;
-    --muted: #888;
-    --dim: #555;
+    --purple: #7C3AED;
+    --purple-light: #A855F7;
+    --bg: #F0FDF4;
+    --surface: #ffffff;
+    --border: #E5E7EB;
+    --text: #1F2937;
+    --muted: #6B7280;
+    --dim: #9CA3AF;
   }
 
   body {
     background: var(--bg);
     color: var(--text);
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     line-height: 1.7;
     min-height: 100vh;
   }
 
   .header {
-    background: linear-gradient(180deg, #1a0000 0%, var(--bg) 100%);
-    border-bottom: 1px solid var(--border);
-    padding: 32px 24px 28px;
+    background: linear-gradient(135deg, var(--purple) 0%, var(--purple-light) 100%);
+    padding: 36px 24px 32px;
     text-align: center;
-    position: relative;
-    overflow: hidden;
   }
-  .header::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(90deg, transparent, transparent 20px, rgba(229,9,20,.04) 20px, rgba(229,9,20,.04) 21px);
-  }
-  .logo { font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; letter-spacing: .05em; position: relative; }
-  .logo span { color: var(--red); }
-  .header-sub { font-size: .8rem; color: var(--muted); font-weight: 600; letter-spacing: .1em; text-transform: uppercase; margin-top: 6px; position: relative; }
+  .logo { font-size: 2.2rem; font-weight: 900; color: white; letter-spacing: .02em; }
+  .logo span { opacity: 0.9; }
+  .header-sub { font-size: .82rem; color: rgba(255,255,255,0.75); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin-top: 6px; }
 
   .container { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
 
-  .page-title { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--text); margin-bottom: 6px; letter-spacing: .05em; }
-  .page-date { font-size: .78rem; color: var(--dim); font-weight: 600; margin-bottom: 36px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+  .page-title { font-size: 1.8rem; font-weight: 900; color: var(--text); margin-bottom: 6px; }
+  .page-date { font-size: .78rem; color: var(--dim); font-weight: 700; margin-bottom: 36px; padding-bottom: 24px; border-bottom: 2px solid var(--border); }
 
   .section { margin-bottom: 36px; }
-  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; color: var(--red); letter-spacing: .08em; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
-  .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+  .section-title {
+    font-size: 1rem;
+    font-weight: 900;
+    color: var(--purple);
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-title::after { content: ''; flex: 1; height: 2px; background: var(--border); border-radius: 2px; }
 
-  p { font-size: .9rem; color: #ccc; margin-bottom: 10px; }
+  p { font-size: .92rem; color: var(--muted); margin-bottom: 10px; font-weight: 600; }
 
   ul { list-style: none; padding: 0; margin-bottom: 10px; }
-  ul li { font-size: .9rem; color: #ccc; padding: 6px 0 6px 18px; position: relative; border-bottom: 1px solid var(--border); }
+  ul li {
+    font-size: .92rem;
+    color: var(--muted);
+    padding: 8px 0 8px 20px;
+    position: relative;
+    border-bottom: 1px solid var(--border);
+    font-weight: 600;
+  }
   ul li:last-child { border-bottom: none; }
-  ul li::before { content: '›'; position: absolute; left: 0; color: var(--red); font-weight: 800; }
+  ul li::before { content: '›'; position: absolute; left: 0; color: var(--purple); font-weight: 900; font-size: 1.1rem; }
 
-  .highlight { background: rgba(229,9,20,.08); border: 1px solid rgba(229,9,20,.2); border-radius: 10px; padding: 16px 18px; margin-bottom: 10px; font-size: .88rem; color: #ddd; }
-  .highlight strong { color: var(--red); }
+  .highlight {
+    background: rgba(124, 58, 237, 0.06);
+    border: 1.5px solid rgba(124, 58, 237, 0.2);
+    border-radius: 14px;
+    padding: 16px 18px;
+    margin-bottom: 12px;
+    font-size: .9rem;
+    color: var(--text);
+    font-weight: 700;
+  }
+  .highlight strong { color: var(--purple); }
 
-  .contact-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-top: 32px; text-align: center; }
-  .contact-box .icon { font-size: 2rem; margin-bottom: 8px; }
-  .contact-box h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; letter-spacing: .05em; margin-bottom: 6px; }
-  .contact-box a { color: var(--red); text-decoration: none; font-weight: 700; font-size: .9rem; }
+  .card {
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  }
 
-  .footer { text-align: center; padding: 24px; font-size: .72rem; color: var(--dim); border-top: 1px solid var(--border); }
+  .contact-box {
+    background: linear-gradient(135deg, var(--purple) 0%, var(--purple-light) 100%);
+    border-radius: 20px;
+    padding: 28px 20px;
+    margin-top: 32px;
+    text-align: center;
+    color: white;
+  }
+  .contact-box .icon { font-size: 2.2rem; margin-bottom: 10px; }
+  .contact-box h3 { font-size: 1.3rem; font-weight: 900; margin-bottom: 6px; }
+  .contact-box p { color: rgba(255,255,255,0.8); font-size: .85rem; margin-bottom: 12px; }
+  .contact-box a {
+    display: inline-block;
+    background: white;
+    color: var(--purple);
+    text-decoration: none;
+    font-weight: 800;
+    font-size: .9rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+
+  .admob-notice {
+    background: #FFF7ED;
+    border: 1.5px solid #FED7AA;
+    border-radius: 14px;
+    padding: 16px 18px;
+    margin-bottom: 10px;
+    font-size: .88rem;
+    color: #92400E;
+    font-weight: 700;
+  }
+  .admob-notice strong { color: #B45309; }
+
+  .footer {
+    text-align: center;
+    padding: 24px;
+    font-size: .75rem;
+    color: var(--dim);
+    border-top: 2px solid var(--border);
+    font-weight: 700;
+  }
 </style>
 </head>
 <body>
 
 <div class="header">
-  <div class="logo">🎬 <span>Dizi</span> Alemi</div>
+  <div class="logo">🧠 <span>Bilgi Alemi</span></div>
   <div class="header-sub">Gizlilik Politikası</div>
 </div>
 
 <div class="container">
 
   <div class="page-title">Gizlilik Politikası</div>
-  <div class="page-date">Son güncelleme: Mart 2026</div>
+  <div class="page-date">Son güncelleme: Nisan 2026</div>
 
   <div class="section">
     <div class="section-title">Genel Bilgi</div>
     <div class="highlight">
-      <strong>Dizi Alemi</strong>, kullanıcılarının gizliliğine önem verir. Bu uygulama tamamen çevrimdışı çalışmakta olup kişisel veri toplamamaktadır.
+      <strong>Bilgi Alemi</strong>, kullanıcılarının gizliliğine önem verir. Uygulama kişisel veri toplamamakta olup yalnızca oyun deneyimini iyileştirmek için yerel depolama ve reklam hizmetleri kullanmaktadır.
     </div>
-    <p>Bu gizlilik politikası, Dizi Alemi uygulamasının kişisel verileri nasıl işlediğini açıklamaktadır. Uygulamayı kullanarak bu politikayı kabul etmiş sayılırsınız.</p>
+    <p>Bu gizlilik politikası, Bilgi Alemi uygulamasının verileri nasıl işlediğini açıklamaktadır. Uygulamayı kullanarak bu politikayı kabul etmiş sayılırsınız.</p>
   </div>
 
   <div class="section">
     <div class="section-title">Toplanan Veriler</div>
-    <p>Dizi Alemi uygulaması <strong>hiçbir kişisel veri toplamamaz ve dış sunuculara göndermez.</strong></p>
-    <ul>
-      <li>Uygulama tamamen çevrimdışı (offline) çalışır</li>
-      <li>İnternet bağlantısı gerektirmez</li>
-      <li>Kullanıcı verileri yalnızca cihazınızda yerel olarak saklanır</li>
-      <li>Herhangi bir analitik veya takip aracı kullanılmaz</li>
-      <li>Reklam ağları veya üçüncü taraf SDK'lar bulunmaz</li>
-    </ul>
+    <div class="card">
+      <p>Bilgi Alemi uygulaması <strong>kişisel veri toplamamaz.</strong> Aşağıdaki bilgiler yalnızca cihazınızda yerel olarak saklanır:</p>
+      <ul>
+        <li>Kullanıcı adı (isteğe bağlı, yalnızca uygulama içi görüntüleme için)</li>
+        <li>Oyun skorları ve istatistikler</li>
+        <li>XP, seviye ve görev ilerlemesi</li>
+        <li>Uygulama ayarları (ses, tema tercihleri)</li>
+      </ul>
+      <p style="margin-top:10px;">Bu veriler hiçbir sunucuya aktarılmaz. Uygulamayı sildiğinizde tüm veriler otomatik olarak silinir.</p>
+    </div>
   </div>
 
   <div class="section">
-    <div class="section-title">Yerel Depolama</div>
-    <p>Uygulama, yalnızca oyun deneyimini iyileştirmek amacıyla aşağıdaki bilgileri cihazınızda yerel olarak saklar:</p>
-    <ul>
-      <li>Kullanıcı adı (isteğe bağlı, yalnızca skor tablosu için)</li>
-      <li>Oyun skorları ve istatistikleri</li>
-      <li>Ayarlar (ses, tema, titreşim tercihleri)</li>
-      <li>XP, seviye ve rozet bilgileri</li>
-      <li>Günlük challenge ilerlemesi</li>
-    </ul>
-    <p>Bu veriler yalnızca cihazınızda bulunur, hiçbir sunucuya aktarılmaz. Uygulamayı sildiğinizde tüm veriler otomatik olarak silinir.</p>
+    <div class="section-title">Reklam Hizmetleri</div>
+    <div class="admob-notice">
+      ⚠️ Bu uygulama <strong>Google AdMob</strong> reklam hizmetini kullanmaktadır.
+    </div>
+    <div class="card">
+      <p>Google AdMob, reklam göstermek amacıyla aşağıdaki verileri toplayabilir:</p>
+      <ul>
+        <li>Reklam etkileşim verileri (tıklama, gösterim)</li>
+        <li>Cihaz bilgileri (model, işletim sistemi)</li>
+        <li>Yaklaşık konum bilgisi (IP adresi bazlı)</li>
+        <li>Reklam kimliği (IDFA/GAID)</li>
+      </ul>
+      <p style="margin-top:10px;">Google'ın gizlilik politikası hakkında daha fazla bilgi için: <strong>policies.google.com/privacy</strong></p>
+    </div>
   </div>
 
   <div class="section">
     <div class="section-title">Üçüncü Taraf Hizmetler</div>
-    <p>Dizi Alemi şu an herhangi bir üçüncü taraf hizmet, reklam ağı veya analitik araç kullanmamaktadır.</p>
-    <p>İlerideki güncellemelerde reklam veya analitik entegrasyonu planlanırsa bu politika güncellenecek ve kullanıcılar bilgilendirilecektir.</p>
+    <div class="card">
+      <ul>
+        <li>Google AdMob — reklam gösterimi</li>
+        <li>Google Play Services — uygulama dağıtımı</li>
+      </ul>
+      <p style="margin-top:10px;">Bu hizmetlerin kendi gizlilik politikaları mevcuttur ve bu politikayı kapsamaz.</p>
+    </div>
   </div>
 
   <div class="section">
     <div class="section-title">Çocukların Gizliliği</div>
-    <p>Dizi Alemi her yaştan kullanıcıya açık bir uygulamadır. Kişisel veri toplanmadığından çocukların gizliliği konusunda ek bir risk bulunmamaktadır.</p>
+    <p>Bilgi Alemi her yaştan kullanıcıya açık bir uygulamadır. 13 yaş altı kullanıcılardan kişisel veri toplanmamaktadır. Reklam gösterimi yaş uygun içeriklerle sınırlıdır.</p>
   </div>
 
   <div class="section">
@@ -135,14 +208,14 @@
   <div class="contact-box">
     <div class="icon">✉️</div>
     <h3>İletişim</h3>
-    <p style="font-size:.82rem;color:var(--muted);margin-bottom:8px">Gizlilik politikasıyla ilgili sorularınız için:</p>
+    <p>Gizlilik politikasıyla ilgili sorularınız için bize ulaşın:</p>
     <a href="mailto:dizifilmyarismasi@gmail.com">dizifilmyarismasi@gmail.com</a>
   </div>
 
 </div>
 
 <div class="footer">
-  © 2026 Dizi Alemi · Tüm hakları saklıdır
+  © 2026 Bilgi Alemi · Tüm hakları saklıdır
 </div>
 
 </body>
