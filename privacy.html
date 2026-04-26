@@ -3,212 +3,149 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gizlilik Politikası — Bilgi Alemi</title>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<title>Gizlilik Politikası - Bilgi Alemi</title>
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --purple: #7C3AED;
-    --purple-light: #A855F7;
-    --bg: #F0FDF4;
-    --surface: #ffffff;
-    --border: #E5E7EB;
-    --text: #1F2937;
-    --muted: #6B7280;
-    --dim: #9CA3AF;
-  }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Nunito', sans-serif;
-    line-height: 1.7;
-    min-height: 100vh;
-  }
-
-  .header {
-    background: linear-gradient(135deg, var(--purple) 0%, var(--purple-light) 100%);
-    padding: 36px 24px 32px;
-    text-align: center;
-  }
-  .logo { font-size: 2.2rem; font-weight: 900; color: white; letter-spacing: .02em; }
-  .logo span { opacity: 0.9; }
-  .header-sub { font-size: .82rem; color: rgba(255,255,255,0.75); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin-top: 6px; }
-
-  .container { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-
-  .page-title { font-size: 1.8rem; font-weight: 900; color: var(--text); margin-bottom: 6px; }
-  .page-date { font-size: .78rem; color: var(--dim); font-weight: 700; margin-bottom: 36px; padding-bottom: 24px; border-bottom: 2px solid var(--border); }
-
-  .section { margin-bottom: 36px; }
-  .section-title {
-    font-size: 1rem;
-    font-weight: 900;
-    color: var(--purple);
-    letter-spacing: .05em;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .section-title::after { content: ''; flex: 1; height: 2px; background: var(--border); border-radius: 2px; }
-
-  p { font-size: .92rem; color: var(--muted); margin-bottom: 10px; font-weight: 600; }
-
-  ul { list-style: none; padding: 0; margin-bottom: 10px; }
-  ul li {
-    font-size: .92rem;
-    color: var(--muted);
-    padding: 8px 0 8px 20px;
-    position: relative;
-    border-bottom: 1px solid var(--border);
-    font-weight: 600;
-  }
-  ul li:last-child { border-bottom: none; }
-  ul li::before { content: '›'; position: absolute; left: 0; color: var(--purple); font-weight: 900; font-size: 1.1rem; }
-
-  .highlight {
-    background: rgba(124, 58, 237, 0.06);
-    border: 1.5px solid rgba(124, 58, 237, 0.2);
-    border-radius: 14px;
-    padding: 16px 18px;
-    margin-bottom: 12px;
-    font-size: .9rem;
-    color: var(--text);
-    font-weight: 700;
-  }
-  .highlight strong { color: var(--purple); }
-
-  .card {
-    background: var(--surface);
-    border: 1.5px solid var(--border);
-    border-radius: 16px;
-    padding: 20px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-  }
-
-  .contact-box {
-    background: linear-gradient(135deg, var(--purple) 0%, var(--purple-light) 100%);
-    border-radius: 20px;
-    padding: 28px 20px;
-    margin-top: 32px;
-    text-align: center;
-    color: white;
-  }
-  .contact-box .icon { font-size: 2.2rem; margin-bottom: 10px; }
-  .contact-box h3 { font-size: 1.3rem; font-weight: 900; margin-bottom: 6px; }
-  .contact-box p { color: rgba(255,255,255,0.8); font-size: .85rem; margin-bottom: 12px; }
-  .contact-box a {
-    display: inline-block;
-    background: white;
-    color: var(--purple);
-    text-decoration: none;
-    font-weight: 800;
-    font-size: .9rem;
-    padding: 10px 20px;
-    border-radius: 10px;
-  }
-
-  .admob-notice {
-    background: #FFF7ED;
-    border: 1.5px solid #FED7AA;
-    border-radius: 14px;
-    padding: 16px 18px;
-    margin-bottom: 10px;
-    font-size: .88rem;
-    color: #92400E;
-    font-weight: 700;
-  }
-  .admob-notice strong { color: #B45309; }
-
-  .footer {
-    text-align: center;
-    padding: 24px;
-    font-size: .75rem;
-    color: var(--dim);
-    border-top: 2px solid var(--border);
-    font-weight: 700;
-  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8fafc; color: #1e293b; line-height: 1.7; }
+  .header { background: linear-gradient(135deg, #7C3AED, #A855F7); padding: 40px 20px; text-align: center; }
+  .header h1 { color: white; font-size: 28px; font-weight: 800; }
+  .header p { color: rgba(255,255,255,0.8); margin-top: 8px; font-size: 14px; }
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 16px; }
+  .card { background: white; border-radius: 16px; padding: 24px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .card h2 { font-size: 17px; font-weight: 700; color: #1e293b; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #f1f5f9; }
+  .card p, .card li { font-size: 14px; color: #475569; margin-bottom: 8px; }
+  .card ul { padding-left: 20px; }
+  .card li { margin-bottom: 6px; }
+  .badge { display: inline-block; background: #eff6ff; color: #3b82f6; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-bottom: 12px; }
+  .warning { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px 16px; border-radius: 8px; margin-top: 8px; font-size: 13px; color: #92400e; }
+  .contact { text-align: center; padding: 24px; background: white; border-radius: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .contact a { color: #7C3AED; font-weight: 700; text-decoration: none; }
+  .footer { text-align: center; padding: 20px; color: #94a3b8; font-size: 12px; }
 </style>
 </head>
 <body>
 
 <div class="header">
-  <div class="logo">🧠 <span>Bilgi Alemi</span></div>
-  <div class="header-sub">Gizlilik Politikası</div>
+  <h1>🔒 Gizlilik Politikası</h1>
+  <p>Bilgi Alemi · Son güncelleme: Nisan 2026</p>
 </div>
 
 <div class="container">
 
-  <div class="page-title">Gizlilik Politikası</div>
-  <div class="page-date">Son güncelleme: Nisan 2026</div>
-
-  <div class="section">
-    <div class="section-title">Genel Bilgi</div>
-    <div class="highlight">
-      <strong>Bilgi Alemi</strong>, kullanıcılarının gizliliğine önem verir. Uygulama kişisel veri toplamamakta olup yalnızca oyun deneyimini iyileştirmek için yerel depolama ve reklam hizmetleri kullanmaktadır.
-    </div>
-    <p>Bu gizlilik politikası, Bilgi Alemi uygulamasının verileri nasıl işlediğini açıklamaktadır. Uygulamayı kullanarak bu politikayı kabul etmiş sayılırsınız.</p>
+  <div class="card">
+    <h2>1. Genel Bilgi</h2>
+    <p>Bilgi Alemi uygulaması, kullanıcıların gizliliğine önem verir. Bu politika, hangi verileri topladığımızı, nasıl kullandığımızı ve koruduğumuzu açıklar. Uygulamayı kullanarak bu politikayı kabul etmiş sayılırsınız.</p>
   </div>
 
-  <div class="section">
-    <div class="section-title">Toplanan Veriler</div>
-    <div class="card">
-      <p>Bilgi Alemi uygulaması <strong>kişisel veri toplamamaz.</strong> Aşağıdaki bilgiler yalnızca cihazınızda yerel olarak saklanır:</p>
-      <ul>
-        <li>Kullanıcı adı (isteğe bağlı, yalnızca uygulama içi görüntüleme için)</li>
-        <li>Oyun skorları ve istatistikler</li>
-        <li>XP, seviye ve görev ilerlemesi</li>
-        <li>Uygulama ayarları (ses, tema tercihleri)</li>
-      </ul>
-      <p style="margin-top:10px;">Bu veriler hiçbir sunucuya aktarılmaz. Uygulamayı sildiğinizde tüm veriler otomatik olarak silinir.</p>
-    </div>
+  <div class="card">
+    <h2>2. Topladığımız Veriler</h2>
+    <div class="badge">Hesap Bilgileri</div>
+    <ul>
+      <li>Google hesabınızdan: ad, soyad, e-posta adresi</li>
+      <li>Profil fotoğrafı (isteğe bağlı)</li>
+    </ul>
+    <br>
+    <div class="badge">Oyun Verileri</div>
+    <ul>
+      <li>Oyun istatistikleri (puan, oyun sayısı, doğru/yanlış)</li>
+      <li>XP, seviye ve görev ilerlemesi</li>
+      <li>Bakiye ve ödeme geçmişi</li>
+    </ul>
+    <br>
+    <div class="badge">Ödeme Verileri</div>
+    <ul>
+      <li>IBAN numarası (ödeme talebi sırasında)</li>
+      <li>Ad soyad (ödeme için)</li>
+    </ul>
+    <br>
+    <div class="badge">Teknik Veriler</div>
+    <ul>
+      <li>IP adresi (hile tespiti için)</li>
+      <li>Cihaz bilgileri (güvenlik için)</li>
+      <li>FCM token (bildirimler için)</li>
+    </ul>
   </div>
 
-  <div class="section">
-    <div class="section-title">Reklam Hizmetleri</div>
-    <div class="admob-notice">
-      ⚠️ Bu uygulama <strong>Google AdMob</strong> reklam hizmetini kullanmaktadır.
-    </div>
-    <div class="card">
-      <p>Google AdMob, reklam göstermek amacıyla aşağıdaki verileri toplayabilir:</p>
-      <ul>
-        <li>Reklam etkileşim verileri (tıklama, gösterim)</li>
-        <li>Cihaz bilgileri (model, işletim sistemi)</li>
-        <li>Yaklaşık konum bilgisi (IP adresi bazlı)</li>
-        <li>Reklam kimliği (IDFA/GAID)</li>
-      </ul>
-      <p style="margin-top:10px;">Google'ın gizlilik politikası hakkında daha fazla bilgi için: <strong>policies.google.com/privacy</strong></p>
-    </div>
+  <div class="card">
+    <h2>3. Verilerin Kullanımı</h2>
+    <ul>
+      <li>Google hesabınızla kimlik doğrulaması</li>
+      <li>Oyun puanlarınızı kaydetmek ve liderlik tablosu</li>
+      <li>Bakiye takibi ve ödeme işlemleri</li>
+      <li>Hile ve bot tespiti</li>
+      <li>Uygulama güvenliğini sağlamak</li>
+      <li>Push bildirim göndermek</li>
+    </ul>
   </div>
 
-  <div class="section">
-    <div class="section-title">Üçüncü Taraf Hizmetler</div>
-    <div class="card">
-      <ul>
-        <li>Google AdMob — reklam gösterimi</li>
-        <li>Google Play Services — uygulama dağıtımı</li>
-      </ul>
-      <p style="margin-top:10px;">Bu hizmetlerin kendi gizlilik politikaları mevcuttur ve bu politikayı kapsamaz.</p>
-    </div>
+  <div class="card">
+    <h2>4. Veri Paylaşımı</h2>
+    <p>Kişisel verilerinizi üçüncü taraflara <strong>satmayız</strong>. Yalnızca şu durumlarda paylaşırız:</p>
+    <ul>
+      <li>Yasal zorunluluk (mahkeme kararı vb.)</li>
+      <li>Ödeme işlemleri için bankacılık kurumları</li>
+      <li>Firebase/Google altyapı hizmetleri (veri depolama)</li>
+      <li>Google AdMob (reklam hizmetleri)</li>
+    </ul>
   </div>
 
-  <div class="section">
-    <div class="section-title">Çocukların Gizliliği</div>
-    <p>Bilgi Alemi her yaştan kullanıcıya açık bir uygulamadır. 13 yaş altı kullanıcılardan kişisel veri toplanmamaktadır. Reklam gösterimi yaş uygun içeriklerle sınırlıdır.</p>
+  <div class="card">
+    <h2>5. Reklam Hizmetleri</h2>
+    <div class="warning">⚠️ Bu uygulama Google AdMob reklam hizmetini kullanmaktadır.</div>
+    <br>
+    <p>Google AdMob şu verileri toplayabilir:</p>
+    <ul>
+      <li>Reklam etkileşim verileri (tıklama, gösterim)</li>
+      <li>Cihaz bilgileri (model, işletim sistemi)</li>
+      <li>Yaklaşık konum (IP adresi bazlı)</li>
+      <li>Reklam kimliği (GAID)</li>
+    </ul>
+    <br>
+    <p>Detaylar: <a href="https://policies.google.com/privacy" style="color:#7C3AED">policies.google.com/privacy</a></p>
   </div>
 
-  <div class="section">
-    <div class="section-title">Politika Değişiklikleri</div>
-    <p>Bu gizlilik politikası zaman zaman güncellenebilir. Önemli değişiklikler uygulama güncellemeleriyle kullanıcılara duyurulacaktır.</p>
+  <div class="card">
+    <h2>6. Veri Güvenliği</h2>
+    <ul>
+      <li>Tüm veriler Google Firebase altyapısında şifreli saklanır</li>
+      <li>Bakiye ve ödeme verileri server-side kontrol edilir</li>
+      <li>Firestore güvenlik kurallarıyla yetkisiz erişim engellenir</li>
+      <li>IBAN bilgileri yalnızca ödeme işlemi için kullanılır</li>
+    </ul>
   </div>
 
-  <div class="contact-box">
-    <div class="icon">✉️</div>
-    <h3>İletişim</h3>
-    <p>Gizlilik politikasıyla ilgili sorularınız için bize ulaşın:</p>
+  <div class="card">
+    <h2>7. Veri Saklama ve Silme</h2>
+    <ul>
+      <li>Hesabınızı sildiğinizde kişisel verileriniz 30 gün içinde silinir</li>
+      <li>Ödeme kayıtları yasal zorunluluk nedeniyle 5 yıl saklanır</li>
+      <li>Oyun istatistikleri hesap silindiğinde kaldırılır</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>8. Çocukların Gizliliği</h2>
+    <p>Uygulama 13 yaş altı kullanıcılara yönelik değildir. 13 yaş altı kullanıcılardan bilerek kişisel veri toplamıyoruz. Böyle bir durum fark edilirse veriler derhal silinir.</p>
+  </div>
+
+  <div class="card">
+    <h2>9. Haklarınız</h2>
+    <ul>
+      <li>Verilerinize erişim talep edebilirsiniz</li>
+      <li>Verilerinizin silinmesini isteyebilirsiniz</li>
+      <li>Pazarlama iletişiminden çıkabilirsiniz</li>
+      <li>Veri işlemeye itiraz edebilirsiniz</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>10. Politika Değişiklikleri</h2>
+    <p>Bu politika zaman zaman güncellenebilir. Önemli değişiklikler uygulama içi bildirimle duyurulacaktır. Uygulamayı kullanmaya devam etmeniz güncel politikayı kabul ettiğiniz anlamına gelir.</p>
+  </div>
+
+  <div class="contact">
+    <p style="font-size:16px; font-weight:700; margin-bottom:8px;">✉️ İletişim</p>
+    <p style="color:#475569; font-size:14px; margin-bottom:8px;">Gizlilik sorularınız için:</p>
     <a href="mailto:dizifilmyarismasi@gmail.com">dizifilmyarismasi@gmail.com</a>
   </div>
 
